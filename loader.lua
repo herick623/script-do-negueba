@@ -65,4 +65,12 @@ _G.SettingsLeviathanKaitun = {
 _G.TaskAfterHaveSanguineArt = function()
     -- ExionScript: ação após obter Sanguine Art
 end
+local NyxOS = loadstring(game:HttpGet("https://raw.githubusercontent.com/btz157/nyxOS/main/dist/nyxOS-beta.lua"))()
 
+local nyx = NyxOS.new({ Title = "Meu script", Size = Vector2.new(720, 440) })
+
+local main = nyx:Tab("Início", "exemplo", "🏠")
+main:Section("Ações")
+main:Button("Olá", function()
+	nyx:Notify("olá!", 3, "success")
+end)
